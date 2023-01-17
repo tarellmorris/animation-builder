@@ -113,7 +113,6 @@ export const AnimationBuilder: AnimationBuilderT = (props) => {
       <Tabs
         activeKey={activeKey}
         onChange={({ activeKey }) => {
-          // @ts-expect-error todo(ts-migration) TS2345 Argument of type 'Key' is not assignable to parameter of type 'SetStateAction<string>'.
           setActiveKey(activeKey);
         }}
         activateOnFocus
@@ -133,7 +132,6 @@ export const AnimationBuilder: AnimationBuilderT = (props) => {
                         <Selector
                           {...rest}
                           key={fieldIndex}
-                          // @ts-expect-error todo(ts-migration) TS2322 Type '{ key: number; field: string; label: string; path: string; options: { label: string; value: string; }[]; required: false; }' is not assignable to type 'IntrinsicAttributes & { label: string; pat...
                           field={nestedField}
                           label={label}
                           path={nestedPath}
